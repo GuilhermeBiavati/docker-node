@@ -9,9 +9,9 @@ WORKDIR /var/www/html
 #   && tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
 #   && rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
 
-COPY . .
-
+COPY package.json .
 RUN npm install
+COPY . .
 
 EXPOSE 3000
 
