@@ -8,8 +8,8 @@ services:
     entrypoint: dockerize -wait tcp://db:3306 -timeout 60s docker-entrypoint.sh node index.js
     networks:
       - node-network
-    volumes:
-      - ./node:/var/www/html
+    # volumes:
+    #   - ./node:/var/www/html
     tty: true
     # ports:
     #   - "3000:3000"
